@@ -23,7 +23,7 @@ A modern, responsive weather application that delivers real-time weather data an
 
 | Desktop View | Mobile View |
 |--------------|-------------|
-| <img src="./assets/banner.png" width="400"> | <img src="./assets/mobile-screenshot.jpg" width="200"> |
+| <img src="./assets/banner.png" width="400"> | <img src="./assets/mobile-screenshot.png" width="200"> |
 
 ## 🛠️ Technologies Used
 
