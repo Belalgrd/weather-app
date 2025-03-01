@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ClimaSphere - Modern Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Weather Header Section -->
+        <header class="weather-header">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Enter city name..." autocomplete="off">
+                <div class="button-group">
+                    <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    <button class="location-btn" aria-label="Use current location"><i class="fas fa-location-arrow"></i></button>
+                </div>
+            </div>
+            <div class="unit-toggle">
+                <button class="unit-btn active" data-unit="metric">°C</button>
+                <button class="unit-btn" data-unit="imperial">°F</button>
+            </div>
+        </header>
+
+        <!-- Main Weather Content -->
+        <main class="weather-main">
+            <!-- Current Weather Section -->
+            <section class="current-weather">
+                <div class="weather-info">
+                    <h1 class="location"><i class="fas fa-map-marker-alt"></i> <span>Loading...</span></h1>
+                    <div class="temperature">--°</div>
+                    <div class="condition">--</div>
+                </div>
+                <div class="weather-icon">
+                    <img src="" alt="Weather Icon" class="icon" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Weather Details Grid -->
+            <section class="weather-details">
+                <div class="detail-card">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div>
+                        <span class="detail-value feels-like">--°</span>
+                        <span class="detail-label">Feels Like</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <span class="detail-value humidity">--%</span>
+                        <span class="detail-label">Humidity</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <span class="detail-value wind">-- km/h</span>
+                        <span class="detail-label">Wind Speed</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div>
+                        <span class="detail-value pressure">-- hPa</span>
+                        <span class="detail-label">Pressure</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Forecast Section -->
+        <section class="weather-forecast">
+            <div class="forecast-header">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-tabs">
+                    <button class="tab-btn active" data-type="hourly">Hourly</button>
+                    <button class="tab-btn" data-type="daily">Daily</button>
+                </div>
+            </div>
+            <div class="forecast-content hourly active"></div>
+            <div class="forecast-content daily"></div>
+        </section>
+
+        <!-- Recent Searches Section -->
+        <aside class="recent-searches">
+            <h3>Recent Searches</h3>
+            <div class="recent-list"></div>
+        </aside>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
